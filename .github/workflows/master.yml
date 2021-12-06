@@ -1,6 +1,5 @@
 name: Testes
 
-# Gatilhos
 on:
   push:
     branches: [ main ]  
