@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-12-06T01:08:55.868Z",
+    "end": "2021-12-06T01:09:28.684Z",
+    "duration": 32816,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0ec79049-0a16-4d93-a288-178020744d53",
+      "title": "",
+      "fullFile": "cypress/integration/cadastro.spec.js",
+      "file": "cypress/integration/cadastro.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de5d4241-9e7e-4cf6-b871-f276a8ff6af9",
+          "title": "Cadastro de Usuários",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Quando preencho todos campos, então devo ser cadastrado",
+              "fullTitle": "Cadastro de Usuários Quando preencho todos campos, então devo ser cadastrado",
+              "timedOut": null,
+              "duration": 28623,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com');\ncy.get('a[title=\"Log in to your customer account\"]').click();\ncy.get('h1[class=\"page-heading\"]').should('have.text', 'Authentication');\ncy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate').click();\ncy.get('h1').should('have.text', 'Create an account');\ncy.get('input#id_gender2').check();\ncy.get('input#customer_firstname').type(chance.first());\ncy.get('input#customer_lastname').type(chance.last());\ncy.get('input#email').click();\ncy.get('input#passwd').type('Pwd123@');\ncy.get('select#days').select('10');\ncy.get('select#months').select('June');\ncy.get('select#years').select('2018');\ncy.get('input[name=\"newsletter\"]').check();\ncy.get('input#optin').check();\ncy.get('#company').type(chance.company());\ncy.get('#address1').type(chance.address());\ncy.get('#address2').type('Terreo');\ncy.get('#city').type(chance.city());\ncy.get('#id_country').select('United States');\ncy.get('select#id_state').select(6);\ncy.get('#postcode').type(chance.zip());\ncy.get('textarea[name=\"other\"]').type('Outras informações');\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').clear();\ncy.get('#alias').type(chance.address());\ncy.get('button#submitAccount').click();\ncy.get('.info-account').should('have.text', 'Welcome to your account. Here you can manage all of your personal information and orders.');",
+              "err": {},
+              "uuid": "1b78d153-b8f9-4c14-b671-bdcbac269fb8",
+              "parentUUID": "de5d4241-9e7e-4cf6-b871-f276a8ff6af9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b78d153-b8f9-4c14-b671-bdcbac269fb8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 28623,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
